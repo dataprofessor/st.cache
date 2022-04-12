@@ -8,14 +8,14 @@ st.header('Streamlit Cache')
 @st.cache(suppress_st_warning=True)
 def load_data_a():
   df = pd.DataFrame(
-    np.random.rand(10000000, 5),
+    np.random.rand(2000000, 5),
     columns=['a', 'b', 'c', 'd', 'e']
   )
   return df
 
 def load_data_b():
   df = pd.DataFrame(
-    np.random.rand(10000000, 5),
+    np.random.rand(2000000, 5),
     columns=['a', 'b', 'c', 'd', 'e']
   )
   return df
