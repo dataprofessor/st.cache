@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 from time import time
 
-st.header('Streamlit Cache')
+st.header('st.cache')
 
 @st.cache(suppress_st_warning=True)
 def load_data_a():
