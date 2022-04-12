@@ -23,7 +23,7 @@ You can simply add `st.cache` decorator on the preceding line of a custom functi
 
 ## Demo app
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/dataprofessor/streamlit-cache/)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/dataprofessor/st.cache/)
 
 ## Code
 Here's how to use st.write:
