@@ -26,7 +26,7 @@ You can simply add `st.cache` decorator on the preceding line of a custom functi
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/dataprofessor/st.cache/)
 
 ## Code
-Here's how to use st.write:
+Here's how to use `st.cache`:
 ```python
 import streamlit as st
 import numpy as np
