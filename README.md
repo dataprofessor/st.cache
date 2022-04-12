@@ -1,8 +1,8 @@
-# Streamlit Cache
+# st.cache
 
 `st.cache` allows you to optimize the performance of your Streamlit app.
 
-Streamlit provides a caching mechanism that allows your app to stay performant even when loading data from the web, manipulating large datasets, or performing expensive computations. This is done with the @st.cache decorator.
+Streamlit provides a caching mechanism that allows your app to stay performant even when loading data from the web, manipulating large datasets, or performing expensive computations. This is done with the `@st.cache` decorator.
 
 When you mark a function with the @st.cache decorator, it tells Streamlit that whenever the function is called it needs to check a few things:
 
@@ -15,7 +15,7 @@ If this is the first time Streamlit has seen these four components with these ex
 
 The way Streamlit keeps track of changes in these components is through hashing. Think of the cache as an in-memory key-value store, where the key is a hash of all of the above and the value is the actual output object passed by reference.
 
-Finally, @st.cache supports arguments to configure the cache's behavior. You can find more information on those in our API reference.
+Finally, `@st.cache` supports arguments to configure the cache's behavior. You can find more information on those in our API reference.
 
 ## How to use?
 
@@ -33,7 +33,7 @@ import numpy as np
 import pandas as pd
 from time import time
 
-st.header('Streamlit Cache')
+st.header('st.cache')
 
 @st.cache(suppress_st_warning=True)
 def load_data_a():
