@@ -5,7 +5,7 @@ from time import time
 
 st.header('Streamlit Cache')
 
-@st.cache()
+@st.cache(suppress_st_warning=True)
 def load_data_a():
   st.subheader('Using st.cache')
   df = pd.DataFrame(
