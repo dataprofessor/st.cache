@@ -7,6 +7,7 @@ st.header('Streamlit Cache')
 
 @st.cache()
 def load_data_a():
+  st.subheader('Using st.cache')
   df = pd.DataFrame(
     np.random.rand(10000, 5),
     columns=['a', 'b', 'c', 'd', 'e']
@@ -14,6 +15,7 @@ def load_data_a():
   return st.write(df)
 
 def load_data_b():
+  st.subheader('Not using st.cache')
   df = pd.DataFrame(
     np.random.rand(10000, 5),
     columns=['a', 'b', 'c', 'd', 'e']
