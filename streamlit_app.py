@@ -1,14 +1,32 @@
 import streamlit as st
+import numpy as np
 import pandas as pd
-import pandas_profiling
+from time import time
 
-from streamlit_pandas_profiling import st_profile_report
+st.header('Streamlit Cache')
 
-df = pd.read_csv('https://raw.githubusercontent.com/dataprofessor/data/master/penguins_cleaned.csv')
+@st.cache()
+def load_data_a():
+  df = pd.DataFrame(
+    np.random.rand(10000, 5),
+    columns=['a', 'b', 'c', 'd', 'e']
+  )
+  return df
 
-@st.cache(suppress_st_warning=True)
-def pp_report(input_data):
-  pr = input_data.profile_report()
-  return st_profile_report(pr)
+def load_data_b():
+  df = pd.DataFrame(
+    np.random.rand(10000, 5),
+    columns=['a', 'b', 'c', 'd', 'e']
+  )
+  return df
 
-pp_report(df)
+a0 = time()
+load_data_a()
+a1 = time()
+st.info(a1-a0)
+
+
+b0 = time()
+load_data_b()
+b1 = time()
+st.info(b1-b0)
