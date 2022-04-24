@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 from time import time
 
-st.header('st.cache')
+st.title('st.cache')
 
 # Using cache
 a0 = time()
