@@ -5,6 +5,10 @@ from time import time
 
 st.header('st.cache')
 
+# Using cache
+a0 = time()
+st.subheader('Using st.cache')
+
 @st.cache(suppress_st_warning=True)
 def load_data_a():
   df = pd.DataFrame(
@@ -13,6 +17,15 @@ def load_data_a():
   )
   return df
 
+st.write(load_data_a())
+a1 = time()
+st.info(a1-a0)
+
+
+# Not using cache
+b0 = time()
+st.subheader('Not using st.cache')
+
 def load_data_b():
   df = pd.DataFrame(
     np.random.rand(2000000, 5),
@@ -20,16 +33,6 @@ def load_data_b():
   )
   return df
 
-# Using cache
-a0 = time()
-st.subheader('Using st.cache')
-st.write(load_data_a())
-a1 = time()
-st.info(a1-a0)
-
-# Not using cache
-b0 = time()
-st.subheader('Not using st.cache')
 st.write(load_data_b())
 b1 = time()
 st.info(b1-b0)
